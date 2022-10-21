@@ -208,4 +208,15 @@ Page({
       urls: [this.data.imgSrc] // 需要预览的图片 http 链接列表
     })
   },
+  handleSaveImg() {
+    wx.saveImageToPhotosAlbum({
+      filePath: this.data.imgSrc,
+      success(res) {
+        wx.showToast({
+          title: '保存成功',
+          icon: 'success',
+        })
+      }
+    })
+  },
 })
