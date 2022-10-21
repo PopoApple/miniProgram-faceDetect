@@ -26,6 +26,11 @@ Page({
       url: '/pages/getTextFromImg/getTextFromImg',
     })
   },
+  handleGetPhoneNumber() {
+    wx.navigateTo({
+      url: '/pages/getPhoneNumber/getPhoneNumber',
+    })
+  },
   onShow() {
   },
 })

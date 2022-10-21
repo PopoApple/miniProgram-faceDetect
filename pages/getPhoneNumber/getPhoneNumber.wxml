@@ -1,0 +1,11 @@
+<!-- <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">点击获取手机号</button>
+<view>
+  {{ phoneNumber }}
+</view>
+  -->
+  <view class="wrap">
+    由于不好调试，暂未实现
+    1、需要非个人开发者，且完成了认证的小程序
+    2、需要后端配合
+    https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/getPhoneNumber.html
+  </view>

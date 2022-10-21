@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/faceSignIn/faceSignIn",
     "pages/faceSignInVk/faceSignInVk",
-    "pages/getTextFromImg/getTextFromImg"
+    "pages/getTextFromImg/getTextFromImg",
+    "pages/getPhoneNumber/getPhoneNumber"
   ],
   "window":{
     "backgroundTextStyle":"light",
