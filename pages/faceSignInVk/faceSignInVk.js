@@ -111,12 +111,12 @@ Page({
     })
     this.ctx = wx.createCameraContext() // 获取相机实例
     console.log('ctx ----', this.ctx)
-    this.VkSession = wx.createVKSession({
-      track: {
-        face: { mode: 2 } // mode: 1 - 使用摄像头；2 - 手动传入图像
-      },
-      version: 'v1'
-    })// 识别初始化
+    // this.VkSession = wx.createVKSession({
+    //   track: {
+    //     face: { mode: 2 } // mode: 1 - 使用摄像头；2 - 手动传入图像
+    //   },
+    //   version: 'v1'
+    // })// 识别初始化
     this.listener = this.ctx.onCameraFrame((frame) => {
       console.log('onCameraFrame ----', frame)
       if (!this.data.frameWidth && !this.data.frameHeight) {
@@ -128,7 +128,7 @@ Page({
 
       console.log('frame.data ----', frame.data)
       this.frame = frame
-      this.VkSession.detectFace({
+      this.session.detectFace({
         frameBuffer: frame.data, // 图片 ArrayBuffer 数据。人脸图像像素点数据，每四项表示一个像素点的 RGBA
         width: frame.width, // 图像宽度
         height: frame.height, // 图像高度
