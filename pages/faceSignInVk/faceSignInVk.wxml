@@ -1,4 +1,4 @@
-<camera device-position="back" flash="off" binderror="handleCameraError" style="width: 100vw; height: 100vh" class="camera"></camera>
+<camera device-position="{{cameraPosition}}" flash="off" binderror="handleCameraError" style="width: 100vw; height: 100vh" class="camera"></camera>
 <canvas style="width: {{frameWidth}}px; height: {{frameHeight}}px" canvas-id="canvasDrawImage" class="canvasDrawImage"></canvas>
 <view class="modalWrap" wx:if="{{modalShow}}">
   <view class="modalContent">
@@ -9,7 +9,8 @@
       <image style="height: 200px" mode="aspectFit" src="{{imgSrc}}" bindtap="handlePreviewImg"></image>
     </view>
     <view class="modalfooter">
-      <button type="primary" bindtap="handleConfirm">确定</button>
+      <button class="btn" type="primary" bindtap="handleConfirm">确定</button>
+      <button class="btn" type="primary" bindtap="handleSaveImg">保存图片到相册</button>
     </view>
   </view>
 </view>

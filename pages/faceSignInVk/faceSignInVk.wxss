@@ -27,3 +27,6 @@
 .modalImg {
   margin-bottom: 20px;
 }
+.btn {
+  margin-bottom: 10px;
+}

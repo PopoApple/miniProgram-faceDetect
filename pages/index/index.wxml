@@ -1,3 +1,5 @@
 <button class="btn" type="primary" bindtap="handleFaceSignIn">人脸打卡</button>
+<button class="btn" type="primary" bindtap="handleFaceSignInFront">人脸打卡（前）</button>
 <button class="btn" type="primary" bindtap="handleFaceSignInVk">人脸打卡Vk</button>
+<button class="btn" type="primary" bindtap="handleFaceSignInVkFront">人脸打卡Vk（前）</button>
 <button class="btn" type="primary" bindtap="handleGetTextFromImg">图片文字读取</button>

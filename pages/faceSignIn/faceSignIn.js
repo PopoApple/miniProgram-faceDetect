@@ -1,5 +1,6 @@
 Page({
   data: {
+    cameraPosition: 'back',
     width: 0,
     height: 0,
     frameWidth: 0,
@@ -16,7 +17,13 @@ Page({
   passFlag: false,
   nCounter: 0,
   facePadding: 10,
-  onLoad() {
+  onLoad({ cameraPosition }) {
+    console.log('cameraPosition ----', cameraPosition)
+    if (cameraPosition) {
+      this.setData({
+        cameraPosition
+      })
+    }
   },
   onHide() {
     wx.stopFaceDetect()

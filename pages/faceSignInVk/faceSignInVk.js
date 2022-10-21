@@ -1,5 +1,6 @@
 Page({
   data: {
+    cameraPosition: 'back',
     width: 0,
     height: 0,
     frameWidth: 0,
@@ -18,7 +19,13 @@ Page({
   facePadding: 10,
   session: null,
   frame: null,
-  onLoad() {
+  onLoad({ cameraPosition }) {
+    console.log('cameraPosition ----', cameraPosition)
+    if (cameraPosition) {
+      this.setData({
+        cameraPosition
+      })
+    }
   },
   onHide() {
     wx.stopFaceDetect()
@@ -244,6 +251,17 @@ Page({
     wx.previewImage({
       current: this.data.imgSrc, // 当前显示图片的 http 链接
       urls: [this.data.imgSrc] // 需要预览的图片 http 链接列表
+    })
+  },
+  handleSaveImg() {
+    wx.saveImageToPhotosAlbum({
+      filePath: this.data.imgSrc,
+      success(res) {
+        wx.showToast({
+          title: '保存成功',
+          icon: 'success',
+        })
+      }
     })
   },
 })
