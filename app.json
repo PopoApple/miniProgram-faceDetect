@@ -2,7 +2,8 @@
   "pages":[
     "pages/index/index",
     "pages/faceSignIn/faceSignIn",
-    "pages/faceSignInVk/faceSignInVk"
+    "pages/faceSignInVk/faceSignInVk",
+    "pages/getTextFromImg/getTextFromImg"
   ],
   "window":{
     "backgroundTextStyle":"light",

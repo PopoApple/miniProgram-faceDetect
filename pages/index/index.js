@@ -11,10 +11,10 @@ Page({
       url: '/pages/faceSignInVk/faceSignInVk',
     })
   },
-  handleGetIdCardInfo() {
-    // wx.navigateTo({
-    //   url: 'pages/getIdCardInfo/getIdCardInfo',
-    // })
+  handleGetTextFromImg() {
+    wx.navigateTo({
+      url: '/pages/getTextFromImg/getTextFromImg',
+    })
   },
   onShow() {
   },
